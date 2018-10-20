@@ -1,0 +1,19 @@
+.grey{
+	background: #f7f7f7;
+}
+.items>div{
+	background: #fff url(../img/array.png) no-repeat 95% center;
+	background-size:.4rem;
+	height:2.2rem;
+	line-height: 2.2rem;
+	color:#212121;
+	font-size: .8rem;
+	padding-left:1.25rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-bottom:1px solid #ddd;
+}
+.items>div:active{
+	background: #eee;
+}

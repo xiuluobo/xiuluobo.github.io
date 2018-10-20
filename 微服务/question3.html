@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>预约挂号有哪几种方式</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/appoint_type.css">
+</head>
+<body>
+<div class="father">
+	
+</div>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="question.json"></script>
+<script>
+	console.log(title_json);
+	var b = {};
+	b.title = [
+		"1.设备供应在哪？",
+		"2.后勤处在哪？",
+		"3.电工值班室在哪？",
+		"4.消防监控室在哪？",
+		"5.食堂在哪？",
+		"6.打针（输液/新生儿采足跟血/药流观察室/急诊心电图/吸氧）在哪？",
+		"7.简易门诊（甲亢/高血压）在哪？",
+		"8.医生给我开好药了，在哪里取药？",
+		"9.在哪里借用轮椅（行李车/雨伞/邮寄报告单/投诉/取TCT、病理、染色体、唐氏筛查、无创DNA、SMA、耳聋基因、细胞学、维生素ADE报告）？",
+		"10.在哪里办理就诊卡（充值/扣费/打发票/退钱/退卡）？",
+		"11.在哪里办理医保定点（医保收费/门诊医保报销）？",
+		"12.退费窗口在哪？",
+		"13.通过自助机上约了一个号（超声报道/充值/预约挂号/预约B超）在哪里取号？",
+		"14.新生儿在哪游泳/洗澡？",
+		"15.在哪做输卵管造影（钼靶/骨密度）？",
+		"16.怀孕两个月做产检挂什么科？（营养门诊）",
+		"17.胎心监护在哪做?",
+		"18.B超室在哪？",
+		"19.在哪里做糖耐量（喝糖水）检测？",
+
+	];
+	b.content = [
+		"答：在市政府西配楼一楼。",
+		"答：门诊楼负一楼东侧(东西两侧步行梯到负一楼)。",
+		"答：门诊楼负一楼西侧(东西两侧步行梯到负一楼)。",
+		"",
+	];
+	b.type = [];
+
+	
+
+
+	$(function(){
+		$.ajax({
+		   url: "question.json",
+		   type: "GET",//请求方式为get
+		   dataType: "json",
+		   success: function(data) {
+		       /*$.each(data.first, function(i, item) {
+		            var str = '<div>姓名:' + item.name + '性别：' + item.sex + '</div>';
+		            document.write(str);
+		       })*/
+		       console.log(data);
+		   }
+		})
+		var son_html = "";
+		var subtitle = "";
+		var content = "";
+		for(var  i=0;i<b.title.length;i++){
+			subtitle = '<div class="subtitle">'+b.title[i]+'</div>';
+			if(!b.type[i]){
+				content = '<div class="content"><pre>'+b.content[i]+'</pre></div>';
+			}else{
+				content = '<div class="content"><img src="../img/'+b.content[i]+'.png"></div>';
+			}
+			son_html+=subtitle+content;
+		}
+		$(".father").append(son_html);
+		
+
+
+	})
+</script>
+</body>
+</html>
+
+
+

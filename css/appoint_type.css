@@ -1,0 +1,24 @@
+.father{
+	padding:0 1rem 3.3rem;
+}
+.subtitle{
+	color:#3A75EB;
+	font-size:.85rem;
+	margin-bottom:.25rem;
+	margin-top:.6rem;
+}
+.content{
+	line-height: 1rem;
+	font-size:.75rem;
+	color:#333;
+	margin-bottom:.4rem;
+}
+.content pre{
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.appoint_img{
+	margin-top:.3rem;
+	width:100%;
+	height: auto
+}

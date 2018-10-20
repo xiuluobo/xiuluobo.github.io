@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>楼层平面图</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/floor.css">
+</head>
+<body>
+<div class="div_img div_img2">
+	<img src="../img/floora1.jpg" onclick="enlarge(this)" class="floor_img">
+</div>
+<div class="footer">
+	<div class="on">F1</div>
+	<div>F2</div>
+	<div>F3</div>
+	<div>F4</div>
+	<div>F5</div>
+	<div>F6</div>
+	<div>F7</div>
+</div>
+<!-- 图片放大用到的div -->
+<div class="box">
+	<div id="pinch-zoom" class="pinch-zoom">
+		<img class="banner" src="" />
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script  src="../js/underscore.js"></script>
+<script  src="../js/pinchzoom.js"></script>
+<script  src="../js/util.js"></script>
+<script>
+	$(function(){
+		$(".footer>div").each(function(i){
+			$(this).on("click",function(){
+				var on = $(this).hasClass("on");
+				if(!on){
+					$(".footer>div").removeClass("on");
+					$(this).addClass("on");
+					//切换img
+					i++;
+					var img_src = "../img/floora"+i+".jpg";
+					$(".floor_img").attr("src",img_src)
+				}
+			});
+		});
+		/*自适应滚动条高度*/
+		function autoHeight(){
+			var height = $(".footer").height();
+			$(".div_img2").css("margin-bottom",height);
+		}
+		autoHeight()
+	})
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>医生主页</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/doctor_main.css">
+</head>
+<body>
+<div class="head">
+	<img class="sub1" src="../img/doctor.png">
+	<div class="sub2">
+		<span>赵家良</span>
+		<span>主治医师</span>
+	</div>
+	<div class="sub3">妇产科</div>
+	<div class="sub4">石家庄市第四医院</div>
+	<img class="sub5" src="../img/code.png" onclick="show_code()">
+</div>
+<div class="out_call">
+	<div class="time bgg">出诊时间</div><div class="sanjiao"></div>
+</div>
+<div class="table_div">
+	<table class="mytable">
+		<tr class="tr1">
+			<td>时间</td>
+			<td>周一</td>
+			<td>周二</td>
+			<td>周三</td>
+			<td>周四</td>
+			<td>周五</td>
+			<td>周六</td>
+			<td>周日</td>
+		</tr>
+		<tr class="tr2" >
+			<td>全天</td>
+			<td><div class="out">出诊</div></td>
+			<td><div class="out">出诊</div></td>
+			<td></td>
+			<td><div class="out">出诊</div></td>
+			<td></td>
+			<td><div class="out">出诊</div></td>
+			<td><div class="out">出诊</div></td>
+		</tr>
+	</table>
+</div>
+<div class="good_at">
+	<div class="bgg">擅长</div><div class="sanjiao"></div>
+	<div class="msg">
+		擅长妇科常见病、多发病的诊治。现主要从事国产医学，对孕产期保健、促进自然分娩，高危壬辰的诊治、各类难产的处理、阴道助产术、凶险性前置胎盘等产科急危重症的救治有较丰富的经验。
+	</div>
+</div>
+<div class="good_at">
+	<div class="bgg">简介</div><div class="sanjiao"></div>
+	<div class="msg">
+		沈雪艳，副主任医师，产十科副主任，博士
+	</div>
+</div>
+<!-- 二维码 -->
+<div class="modal_shelter"></div>
+<div class="modal_code">
+	<img class="modal_close" src="../img/close.png" >
+	<div class="modal_pic"><img src="../img/code3.png"></div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+	function show_code(){
+		$(".modal_shelter").show();
+		$(".modal_code").show();
+	}
+	$(function(){
+		//关闭二维码
+		$(".modal_close").on("click",function(){
+			$(".modal_shelter").hide();
+			$(".modal_code").hide();
+		})
+		$('.modal_shelter').on('touchmove',function(e){
+		    e.preventDefault();
+		});
+	})
+</script>
+</body>
+</html>
+
+
+

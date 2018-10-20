@@ -1,0 +1,22 @@
+body{
+	background-color: #f7f7f7;
+	padding-bottom:2rem;
+}
+.item{
+	height:2.2rem;
+	line-height: 2.2rem;
+	font-size:.8rem;
+	color:#000;
+	padding-left:1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: #fff url(../img/array.png) no-repeat 95% center;
+	background-size: .4rem;
+	border-bottom:1px solid #eee;
+	padding-right: 1.4rem;
+}
+.item:active{
+	background: #eee url(../img/array.png) no-repeat 95% center;
+	background-size: .4rem;
+}

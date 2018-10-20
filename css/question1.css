@@ -1,0 +1,43 @@
+.body{
+	background-color: #fff;
+}
+.head{
+	height:2.1rem;
+	line-height: 2.1rem;
+	position: relative;
+	padding-left:1.5rem;
+	color:#278dff;
+	font-size:.7rem;
+	border-bottom:.2rem solid #f7f7f7;
+	letter-spacing: .03rem;
+}
+.shuxian{
+	position: absolute;
+	top:.68rem;
+	left:1.08rem;
+	height:.55rem;
+	background:#278dff;
+	width:.1rem;
+}
+.content{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap:wrap;
+	margin-left: .3rem;
+    margin-right: .3rem;
+}
+.one{
+	width:25%;
+	text-align: center;
+	margin-top:1rem;
+}
+.one img{
+	width:2rem;
+	height:2rem;
+}
+.one div{
+	margin-top:.2rem;
+	color:#838899;
+	font-size:.7rem;
+}

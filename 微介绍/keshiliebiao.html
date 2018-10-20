@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>科室列表</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/search.css">
+</head>
+<style>
+.list>div:active{
+	background: #eee;
+}
+</style>
+<body>
+<div class="search_div">
+	<div class="search0">
+		<div class="search_img"><img src="../img/search.png"></div>
+		<input class="input_class2" id="search_id" type="text"  oninput="start_search(this.value)" onpropertychange="start_search(this.value)" placeholder="搜索科室名称">
+		<div class="search_delete" style="display:none">
+			<img src="../img/search_del.png">
+		</div>
+	</div>
+	<div class="search_btn">搜索</div>
+</div>
+<div class="list">
+	<div>产科</div>
+	<div>围产早孕门诊</div>
+	<div>产前诊断中心</div>
+	<div>特需门诊</div>
+	<div>围产早孕门诊</div>
+	<div>妇科</div>
+	<div>宫腔疾病门诊</div>
+	<div>内分泌妇科</div>
+	<div>计划生育科</div>
+	<div>生殖医学中心</div>
+	<div>中医科</div>
+	<div>中西医结合妇科</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+	//输入框输入内容，出现清空按钮
+	function start_search(val){
+		if(val.length>0){
+			$(".search_delete").show();
+		}else{
+			$(".search_delete").hide();
+		}
+	}
+	$(function(){
+		//清除输入框
+		$(".search_delete").on("click",function(){
+			$("#search_id").val("");
+			$(this).hide();
+		})
+		$(".list>div").click(function(){
+			location.href = "./yishengliebiao.html"
+		})
+	})
+</script>
+</body>
+</html>
+
+
+

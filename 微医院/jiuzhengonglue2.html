@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>预约挂号流程</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+</head>
+<style>
+.pic{
+	width:100%;
+	height: auto
+}
+</style>
+<body>
+<div>
+	<img  class="pic" onclick="enlarge(this)">
+</div>
+<!-- 图片放大用到的div -->
+<div class="box">
+	<div id="pinch-zoom" class="pinch-zoom">
+		<img class="banner" src="" />
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script  src="../js/underscore.js"></script>
+<script  src="../js/pinchzoom.js"></script>
+<script  src="../js/util.js"></script>
+<script>
+	$(function(){
+		var i = GetQueryString("state");
+		console.log(i);
+		i--;
+		var img_arr = ["floor1","floor2","floor3","floor4","floor5"];
+		var url = "../img/"+img_arr[i]+".png";
+		$(".pic").attr("src",url)
+	})
+</script>
+</body>
+</html>
+
+
+

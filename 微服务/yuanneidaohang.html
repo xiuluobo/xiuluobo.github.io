@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>院内导航</title>
+<script src="../js/adapt.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/navigation.css?a=1">
+</head>
+<body>
+<div class="head">
+	<div class="shuxian"></div>
+	<div>楼层索引</div>
+</div>
+<div class="all">
+	<div class="one">东配楼</div>
+	<div class="one">门诊楼</div>
+	<div class="one">南住院楼</div>
+	<div class="one">西配楼</div>
+	<div class="one">政府西配楼</div>
+	<div class="one">工会大楼</div>
+</div>
+<div class="head head2">
+	<div class="shuxian"></div>
+	<div>楼层平面图</div>
+</div>
+<div class="hospital hospital1">东配楼</div>
+<div class="hospital_many">
+	<div class="hospital2">东配楼1F</div>
+	<div class="hospital2">东配楼2F</div>
+	<div class="hospital2">东配楼3F</div>
+	<div class="hospital2">东配楼4F</div>
+	<div class="hospital2">东配楼5F</div>
+	<div class="hospital2">东配楼6F</div>
+	<div class="hospital2">东配楼7F</div>
+</div>
+<div class="hospital">门诊楼</div>
+<div class="hospital_many">
+	<div class="hospital2">门诊楼1F</div>
+	<div class="hospital2">门诊楼2F</div>
+</div>
+<div class="hospital">南住院楼</div>
+<div class="hospital_many">
+	<div class="hospital2">南住院楼1F</div>
+	<div class="hospital2">南住院楼2F</div>
+</div>
+<div class="hospital">西配楼</div>
+<div class="hospital_many">
+	<div class="hospital2">西配楼1F</div>
+	<div class="hospital2">西配楼2F</div>
+</div>
+<div class="hospital">政府西配楼</div>
+<div class="hospital_many">
+	<div class="hospital2">政府西配楼1F</div>
+	<div class="hospital2">政府西配楼2F</div>
+</div>
+<div class="hospital">工会大楼</div>
+<div class="hospital_many">
+	<div class="hospital2">工会大楼1F</div>
+	<div class="hospital2">工会大楼2F</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".hospital").on("click",function(){
+			var on = $(this).hasClass("on")
+			var has_sub = $(this).next().hasClass("hospital_many")
+			if(on){
+				$(this).removeClass("on");
+				if(has_sub)$(this).next().removeClass("on")
+			}else{
+				$(this).addClass("on");
+				if(has_sub)$(this).next().addClass("on")
+			}
+		})
+		$(".all .one").each(function(i){
+			$(this).click(function(){
+				var url = "./loucengsuoyin.html?state="+i;
+				location.href = url;
+			})
+		})	
+		$(".hospital2").click(function(){
+			location.href = "./loucengpingmiantu.html"
+		})
+	})
+</script>
+</body>
+</html>
+
+
+
