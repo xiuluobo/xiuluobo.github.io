@@ -1,96 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>市四订阅号</title>
-<script src="./aui/jquery.min.js"></script>
-<script src="./aui/api.js"></script>
-<link rel="stylesheet" href="./aui/aui.css">
-<link rel="stylesheet" href="./aui/me.css">
+    <title>萝卜</title>
 </head>
 <body>
-<div class="aui-content aui-margin-b-15">
-    <ul class="aui-list aui-list-in">
-        <li class="aui-list-header">
-            微服务
-        </li>
-        <li class="aui-list-item " onclick="jump('./微服务/changjianwenti2.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >常见问题</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微服务/yuanneidaohang.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >院内导航</div>
-        </li>
-    </ul>
-</div>
-<div class="aui-content aui-margin-b-15">
-    <ul class="aui-list aui-list-in">
-        <li class="aui-list-header">
-            微介绍
-        </li>
-        <li class="aui-list-item " onclick="jump('./微介绍/yuanzhangjiyu.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >院长寄语</div>
-        </li>
-		<li class="aui-list-item " onclick="jump('./微介绍/tesezhuanke.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >特色专科</div>
-        </li>
-		<li class="aui-list-item " onclick="jump('./微介绍/xuanzeyuanqu.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >专家简介</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微介绍/bianminhuimin.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >便民惠民</div>
-        </li>
-    </ul>
-</div>
-<div class="aui-content aui-margin-b-15">
-    <ul class="aui-list aui-list-in">
-        <li class="aui-list-header">
-            微医院
-        </li>
-        <li class="aui-list-item " onclick="jump('./微医院/jiuzhengonglue.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >就诊攻略</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微医院/yunqibangshou.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >孕期帮手</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微医院/huodongyugao.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >活动预告</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微医院/chuzhenanpai.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >出诊安排</div>
-        </li>
-        <li class="aui-list-item " onclick="jump('./微医院/fuwujuzhen.html')">
-            <div class="aui-list-item-inner aui-list-item-arrow">
-                <div class="aui-list-item-title" >服务矩阵</div>
-        </li>
-    </ul>
-</div>
+我是可爱的萝卜，萝卜，萝卜
 </body>
-<script>
-	$(function(){
-		// $(".aui-list-in").addClass("off")
-		$(".aui-list-header").on("click",function(){
-			var is_off = $(this).parent().hasClass("off");
-			if(is_off){
-				$(this).parent().removeClass("off")
-			}else{
-				$(this).parent().addClass("off")
-			}
-		})
-	})
-	function jump(url){
-		window.location.href = url;
-	}
-</script>
 </html>
